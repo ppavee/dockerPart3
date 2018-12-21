@@ -1,0 +1,14 @@
+# dockerPart3
+Before:
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+8212a6c25790        3 hours ago         /bin/sh -c #(nop)  ENTRYPOINT ["/bin/sh" "-c…   0B                  
+b8917e372d14        3 hours ago         /bin/sh -c #(nop)  EXPOSE 5000                  0B                  
+c01bea6d901c        3 hours ago         /bin/sh -c apt-get update && apt-get install…   298MB    
+
+After:
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+f7f807eb0921        18 seconds ago      /bin/sh -c #(nop)  ENTRYPOINT ["/bin/sh" "-c…   0B                  
+b1d91e94070d        20 seconds ago      /bin/sh -c #(nop)  EXPOSE 5000                  0B                  
+c1156529d7b7        27 seconds ago      /bin/sh -c apt-get update && apt-get install…   141MB 
+
+298MB-141MB=157MB
