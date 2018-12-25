@@ -5,9 +5,10 @@ e874f399cf52        11 minutes ago      /bin/sh -c #(nop)  EXPOSE 8000          
 59f9f1f8a619        11 minutes ago      /bin/sh -c apt-get update && apt-get install…   223MB 
 
 After:
-IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
-a4d9b0d31218        43 seconds ago      /bin/sh -c #(nop)  ENTRYPOINT ["/bin/sh" "-c…   0B                  
-3e179fdc9f83        45 seconds ago      /bin/sh -c #(nop)  EXPOSE 8000                  0B                  
-1342a50d3d99        51 seconds ago      /bin/sh -c apt-get update && apt-get install…   141MB
+IMAGE               CREATED              CREATED BY                                      SIZE                COMMENT
+4784dd0b67ea        About a minute ago   /bin/sh -c #(nop)  ENTRYPOINT ["/bin/sh" "-c…   0B                  
+f101c0fbc030        About a minute ago   /bin/sh -c #(nop)  EXPOSE 8000                  0B                  
+da50ca21ce90        About a minute ago   /bin/sh -c #(nop)  USER default                 0B                  
+bc4f8f6778cb        About a minute ago   /bin/sh -c apt-get update && apt-get install…   199MB     
 
-223MB-141MB=82MB
+223MB-199MB=24MB
