@@ -1,0 +1,15 @@
+Before:
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+4784dd0b67ea        5 minutes ago       /bin/sh -c #(nop)  ENTRYPOINT ["/bin/sh" "-c…   0B                  
+f101c0fbc030        5 minutes ago       /bin/sh -c #(nop)  EXPOSE 8000                  0B                  
+da50ca21ce90        5 minutes ago       /bin/sh -c #(nop)  USER default                 0B                  
+bc4f8f6778cb        5 minutes ago       /bin/sh -c apt-get update && apt-get install…   199MB  
+
+After:
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+75110033cf12        5 hours ago         /bin/sh -c #(nop)  ENTRYPOINT ["/bin/sh" "-c…   0B                  
+a02c23fd8392        5 hours ago         /bin/sh -c #(nop)  USER node                    0B                  
+1c98759efa83        5 hours ago         /bin/sh -c #(nop)  EXPOSE 8000                  0B                  
+cf485698a2b4        5 hours ago         /bin/sh -c npm install                          86.5MB  
+
+199MB-86.5MB=112.5MB
