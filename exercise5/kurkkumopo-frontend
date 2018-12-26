@@ -1,0 +1,14 @@
+Before:
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+4d85ec9fdf28        7 days ago          /bin/sh -c #(nop)  CMD ["serve" "-s" "-l" "3…   0B                  
+887175d35e93        7 days ago          /bin/sh -c #(nop)  EXPOSE 3000                  0B                  
+80e5597f04c4        7 days ago          /bin/sh -c npm install -g serve                 5.15MB              
+58354d748ded        7 days ago          /bin/sh -c npm run build                        2.66MB              
+fdbea7a63cb7        7 days ago          /bin/sh -c npm i                                260MB               
+c85ca221fa1d        7 days ago          /bin/sh -c #(nop) WORKDIR /usr/src/app          0B                  
+5141aad72de5        7 days ago          /bin/sh -c #(nop) COPY dir:9d3e642a7285e9268…   649kB               
+b7d2ace556ed        7 days ago          /bin/sh -c mkdir -p /usr/src/app                0B  
+
+Approximately 268MB.
+
+After:
