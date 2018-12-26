@@ -1,0 +1,13 @@
+Before:
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+7f5d3cc4ccf0        4 hours ago         /bin/sh -c #(nop)  CMD ["/bin/sh" "-c" "[“/b…   0B                  
+351f9665467b        4 hours ago         /bin/sh -c apt-get update && apt-get install…   764MB               
+644485bb5a01        4 hours ago         /bin/sh -c #(nop) WORKDIR /downloads            0B 
+
+After:
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+89f09906905f        3 minutes ago       /bin/sh -c #(nop)  CMD ["/bin/sh" "-c" "[“/b…   0B                  
+1053aa94acb2        3 minutes ago       /bin/sh -c apt-get update && apt-get install…   614MB               
+644485bb5a01        4 hours ago         /bin/sh -c #(nop) WORKDIR /downloads            0B 
+
+764MB-614MB=150MB
