@@ -1,0 +1,18 @@
+Before:
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+f79d0b223201        8 days ago          /bin/sh -c #(nop)  CMD ["python" "-u" "app.p…   0B                  
+e469f6f1e36b        8 days ago          /bin/sh -c pip install --trusted-host pypi.p…   740MB               
+f88ae5101e4e        8 days ago          /bin/sh -c #(nop) COPY dir:aacf423197cb94180…   30.8kB              
+a2594b2f1cbd        8 days ago          /bin/sh -c #(nop) WORKDIR /src                  0B 
+
+Approx. 740MB.
+
+After (what I tried in DockerfileB1):
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+59c5a4eae50c        2 hours ago         /bin/sh -c #(nop)  CMD ["python" "-u" "app.p…   0B                  
+a3bfb75f4c73        2 hours ago         /bin/sh -c #(nop) WORKDIR /src                  0B                  
+01b5260a2092        2 hours ago         /bin/sh -c #(nop) COPY dir:eb648855fb6b59bc7…   31kB                
+e49db9719bbf        2 hours ago         /bin/sh -c pip install docker-py -r requirem…   745MB               
+23478dc68a97        3 hours ago         /bin/sh -c #(nop) COPY file:5331c9b3e89acb30…   118B 
+
+Approx. 745MB.
