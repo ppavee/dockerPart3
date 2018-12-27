@@ -11,4 +11,28 @@ b7d2ace556ed        7 days ago          /bin/sh -c mkdir -p /usr/src/app        
 
 Approximately 268MB.
 
-After:
+Try number 1 using Dockerfile1:
+IMAGE               CREATED              CREATED BY                                      SIZE                COMMENT
+56daaf86c1cc        About a minute ago   /bin/sh -c #(nop)  CMD ["serve" "-s" "-l" "3…   0B                  
+f32c426738e9        About a minute ago   /bin/sh -c #(nop)  EXPOSE 3000                  0B                  
+2617ba462f03        About a minute ago   /bin/sh -c npm install -g serve                 5.15MB              
+1b94ee5d4907        2 minutes ago        /bin/sh -c npm run build                        2.66MB              
+f4a5834c64cf        2 minutes ago        /bin/sh -c npm i                                263MB               
+0feb063a812d        5 minutes ago        /bin/sh -c #(nop) WORKDIR /usr/src/app          0B                  
+3694fd3ac611        5 minutes ago        /bin/sh -c #(nop) COPY dir:62767e220c4ac5bd9…   649kB               
+60745e91cb8d        5 minutes ago        /bin/sh -c mkdir -p /usr/src/app                0B 
+
+Approx. 270MB.
+
+Try number 2 using Dockerfile2:
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+53998b2ba6ba        2 hours ago         /bin/sh -c #(nop)  CMD ["serve" "-s" "-l" "3…   0B                  
+c3ff9880a4fa        2 hours ago         /bin/sh -c #(nop)  EXPOSE 3000                  0B                  
+9421204c278f        2 hours ago         /bin/sh -c npm run build                        2.66MB              
+79f085c36030        2 hours ago         /bin/sh -c npm i                                262MB               
+25cdc9823bf0        2 hours ago         /bin/sh -c #(nop) COPY dir:248ca90009b890501…   649kB               
+5ce777a6e68e        2 hours ago         /bin/sh -c npm install -g serve                 6.39MB              
+7505c05012f3        3 hours ago         /bin/sh -c #(nop) WORKDIR /usr/src/app          0B                  
+d5140f34d885        3 hours ago         /bin/sh -c #(nop) COPY file:8772c2b51f18a0df…   539B
+
+Approx 271MB.
