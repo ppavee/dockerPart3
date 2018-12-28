@@ -7,6 +7,16 @@ f51671d2c3f6        13 days ago         /bin/sh -c #(nop)  CMD ["/bin/bash" "/my
 
 Approx. 250B.
 
+FROM ubuntu:16.04
+
+WORKDIR /mydir
+COPY . /mydir
+RUN chmod +x /mydir/script.bash
+ 
+CMD ["/bin/bash", "/mydir/script.bash"]
+
+
+
 After:
 IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
 bf975fde1abc        2 minutes ago       /bin/sh -c #(nop)  CMD ["/bin/sh" "/mydir/ne…   0B                  
@@ -17,3 +27,13 @@ b8c8305554d2        2 minutes ago       /bin/sh -c chmod a+x /mydir/newScript.sh
 Approx. 126B.
 
 250B-126B=124B. Almost -50%.
+
+FROM alpine
+
+WORKDIR /mydir
+COPY newScript.sh /mydir
+RUN chmod a+x /mydir/newScript.sh
+ 
+CMD ["/bin/sh", "/mydir/newScript.sh"]
+
+Changed the Ubuntu base image to Alpine. I had to also change the script's file format from .bash to .sh.
