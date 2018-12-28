@@ -1,0 +1,19 @@
+Before:
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+f51671d2c3f6        13 days ago         /bin/sh -c #(nop)  CMD ["/bin/bash" "/mydir/…   0B                  
+<missing>           13 days ago         /bin/sh -c chmod +x /mydir/script.bash          64B                 
+<missing>           13 days ago         /bin/sh -c #(nop) COPY dir:fecd46d283b184066…   186B                
+<missing>           13 days ago         /bin/sh -c #(nop) WORKDIR /mydir                0B   
+
+Approx. 250B.
+
+After:
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+bf975fde1abc        2 minutes ago       /bin/sh -c #(nop)  CMD ["/bin/sh" "/mydir/ne…   0B                  
+b8c8305554d2        2 minutes ago       /bin/sh -c chmod a+x /mydir/newScript.sh        63B                 
+2882b15ac7da        2 minutes ago       /bin/sh -c #(nop) COPY file:6d5cb8702558e799…   63B                 
+68a3c1deb132        2 minutes ago       /bin/sh -c #(nop) WORKDIR /mydir                0B
+
+Approx. 126B.
+
+250B-126B=124B. Almost -50%.
