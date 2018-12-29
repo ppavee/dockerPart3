@@ -1,4 +1,4 @@
-#Why to use Docker and what are the benefits?#
+Why to use Docker and what are the benefits?
 
 One of the major advantages of using Docker and why it’s usually related to the usage of cloud services,is the fact that
 Docker is independent of the platform it is used on. Different operation systems – Windows, Mac, Linux etc. - or various
