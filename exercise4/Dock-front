@@ -1,0 +1,16 @@
+FROM node:8-alpine
+
+ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
+
+WORKDIR /mydir
+COPY . /mydir
+
+RUN npm install && \
+    adduser -D newuser && \
+    chown -R newuser:newuser /mydir
+
+EXPOSE 5000
+
+USER newuser
+
+ENTRYPOINT npm start
