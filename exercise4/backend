@@ -7,9 +7,12 @@ bc4f8f6778cb        5 minutes ago       /bin/sh -c apt-get update && apt-get ins
 
 After:
 IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
-75110033cf12        5 hours ago         /bin/sh -c #(nop)  ENTRYPOINT ["/bin/sh" "-c…   0B                  
-a02c23fd8392        5 hours ago         /bin/sh -c #(nop)  USER node                    0B                  
-1c98759efa83        5 hours ago         /bin/sh -c #(nop)  EXPOSE 8000                  0B                  
-cf485698a2b4        5 hours ago         /bin/sh -c npm install                          86.5MB  
+50b0a98f024d        2 minutes ago       /bin/sh -c #(nop)  ENTRYPOINT ["/bin/sh" "-c…   0B                  
+4a46019a6561        2 minutes ago       /bin/sh -c #(nop)  USER newuser                 0B                  
+195413126cc0        2 minutes ago       /bin/sh -c #(nop)  EXPOSE 8000                  0B                  
+801ffbd40dd7        2 minutes ago       /bin/sh -c npm install &&     adduser -D new…   57.9MB              
+ab371bf1dbf2        4 minutes ago       /bin/sh -c #(nop) COPY dir:f4501d2da5fc9f8e2…   400kB               
+f4da7a43b94d        4 minutes ago       /bin/sh -c #(nop) WORKDIR /mydir                0B                  
+f2abf9f1e4f2        4 minutes ago       /bin/sh -c #(nop)  ENV NPM_CONFIG_PREFIX=/ho…   0B    
 
-199MB-86.5MB=112.5MB
+199MB-58.3MB=140.7MB
